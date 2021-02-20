@@ -1,0 +1,8 @@
+dist: trusty
+sudo: required
+services:
+  - docker
+
+script:
+  - docker pull tomarrok/docker-node-api
+  - docker run --name docker-node-api tomarrok/docker-node-api
