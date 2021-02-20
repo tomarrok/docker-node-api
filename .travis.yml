@@ -5,4 +5,4 @@ services:
 
 script:
   - docker pull tomarrok/docker-node-api
-  - docker run --name docker-node-api tomarrok/docker-node-api
+  - docker run --name docker-node-api -d tomarrok/docker-node-api
