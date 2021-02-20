@@ -1,0 +1,25 @@
+{
+    "name": "node-api",
+    "version": "1.0.0",
+    "description": "REST API using Node JS and Express framework",
+    "keywords": ["node", "express", "api"],
+    "license": "MIT License",
+    "author": {
+        "name": "tomarrok",
+        "email": "th.pajon45@gmail.com",
+        "url": "https://github.com/tomarrok"
+    },
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tomarrok/docker-node-api"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "dotenv": "^8.2.0"
+    },
+    "os": ["linux"]
+}
