@@ -13,3 +13,10 @@ before_install:
 script:
   - docker run --name docker-node-api -d tomarrok/docker-node-api
   - docker ps | grep -q tomarrok/docker-node-api
+
+after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - docker tag tomarrok/docker-node-api $DOCKER_USER/tomarrok/docker-node-api:$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_USER/tomarrok/docker-node-api:1.0.1
+  - docker tag tomarrok/docker-node-api $DOCKER_USER/tomarrok/docker-node-api:latest
+  - docker push $DOCKER_USER/tomarrok/docker-node-api:latest
