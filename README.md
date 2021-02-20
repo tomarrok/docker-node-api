@@ -3,6 +3,7 @@
 - **Where to get help**: [the Github Documentation](https://github.com/tomarrok/docker-node-api), [Node.js](https://nodejs.org/en/docs/), [Express](https://expressjs.com)
 
 # Supported tags and respective `Dockerfile` links
+- `latest`
 - `1.0.0`
 
 # Quick reference (cont.)
