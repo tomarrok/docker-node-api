@@ -4,7 +4,7 @@
 
 # Supported tags and respective `Dockerfile` links
 - `latest`
-- `1.0.0`
+- `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`
 
 # Quick reference (cont.)
 - **Where to file issues**: [the Github Issues](https://github.com/tomarrok/docker-node-api/issues)
