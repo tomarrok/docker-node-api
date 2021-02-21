@@ -1,10 +1,15 @@
+![Travis (.org)](https://img.shields.io/travis/tomarrok/docker-node-api)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/tomarrok/docker-node-api)
+![Docker Pulls](https://img.shields.io/docker/pulls/tomarrok/docker-node-api)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/tomarrok/docker-node-api)
+
 # Quick reference
 - **Maintained by**: [Tomarrok](https://github.com/tomarrok)
 - **Where to get help**: [the Github Documentation](https://github.com/tomarrok/docker-node-api), [Node.js](https://nodejs.org/en/docs/), [Express](https://expressjs.com)
 
 # Supported tags and respective `Dockerfile` links
 - `latest`
-- `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`, `1.0.17`, `1.0.19`
+- `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`, `1.0.17`, `1.0.19`, `1.0.20`
 
 # Quick reference (cont.)
 - **Where to file issues**: [the Github Issues](https://github.com/tomarrok/docker-node-api/issues)
