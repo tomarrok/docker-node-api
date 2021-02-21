@@ -8,10 +8,6 @@ services:
   - docker
 
 before_install:
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-  - sudo apt-add-repository https://cli.github.com/packages
-  - sudo apt update -y
-  - sudo apt install gh -y
   - docker build -t $DOCKER_USER/docker-node-api .
 
 script:
@@ -24,6 +20,3 @@ after_success:
   - docker push $DOCKER_USER/docker-node-api:1.0.$TRAVIS_BUILD_NUMBER
   - docker tag $DOCKER_USER/docker-node-api $DOCKER_USER/docker-node-api:latest
   - docker push $DOCKER_USER/docker-node-api:latest
-  - gh auth login --with-token <<< $GITHUB_ACCESS_TOKEN
-  - gh release create 1.0.$TRAVIS_BUILD_NUMBER < <(echo 1.0.$TRAVIS_BUILD_NUMBER)
-  - gh auth logout --hostname github.com < <(echo "y")
