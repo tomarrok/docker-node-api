@@ -8,8 +8,10 @@ services:
   - docker
 
 before_install:
-  - dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-  - dnf install gh -y
+  - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+  - apt-add-repository https://cli.github.com/packages
+  - apt update -y
+  - apt install gh -y
   - docker build -t $DOCKER_USER/docker-node-api .
 
 script:
