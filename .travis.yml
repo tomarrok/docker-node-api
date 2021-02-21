@@ -8,6 +8,8 @@ services:
   - docker
 
 before_install:
+  - dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+  - dnf install gh -y
   - docker build -t $DOCKER_USER/docker-node-api .
 
 script:
@@ -20,3 +22,6 @@ after_success:
   - docker push $DOCKER_USER/docker-node-api:1.0.$TRAVIS_BUILD_NUMBER
   - docker tag $DOCKER_USER/docker-node-api $DOCKER_USER/docker-node-api:latest
   - docker push $DOCKER_USER/docker-node-api:latest
+  - gh auth login --with-token <<< $GITHUB_ACCESS_TOKEN
+  - gh release create 1.0.$TRAVIS_BUILD_NUMBER < <(echo 1.0.$TRAVIS_BUILD_NUMBER)
+  - gh auth logout --hostname github.com < <(echo "y")
