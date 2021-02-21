@@ -4,7 +4,7 @@
 
 # Supported tags and respective `Dockerfile` links
 - `latest`
-- `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`, `1.0.17`, `1.0.18`
+- `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`, `1.0.17`, `1.0.19`
 
 # Quick reference (cont.)
 - **Where to file issues**: [the Github Issues](https://github.com/tomarrok/docker-node-api/issues)
@@ -20,7 +20,7 @@ REST API (Representational State Transfer Application Program) is an architectur
 # How to use this image?
 You have two ways to use this image :
 - Use `docker pull tomarrok/docker-node-api` command.
-- Download the [Github repository](https://github.com/tomarrok/docker-node-api) and use `docker built .`.
+- Download the [Github repository](https://github.com/tomarrok/docker-node-api) and use `docker build .`.
 
 # Configuration
 By default, REST API name and listening port are provided by the image Dockerfile with the following parameters :
