@@ -28,10 +28,12 @@ You have two ways to use this image :
 - Use `docker pull tomarrok/docker-node-api` command.
 - Download the [Github repository](https://github.com/tomarrok/docker-node-api) and use `docker build .`.
 
+The basic configuration of this repository provides you with __all the necessary features to manage user registration and authentication__, based on access token (JWT) and refresh token in a cookie (silent refresh of the workflow).
+
 # Configuration
 By default, REST API name and listening port are provided by the image Dockerfile with the following parameters :
-- `**REST_API_NAME**` : "REST API App"
-- `**REST_API_PORT**` : 5000
+- **`REST_API_NAME`** : `'REST API App'`
+- **`REST_API_PORT`** : `5000`
 
 However, you could provide your own REST API parameters by downloading this image on Github and modifying the `config/app.config.js` file parameters.
 ```
