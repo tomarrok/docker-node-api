@@ -1,22 +1,27 @@
+require('rootpath')();
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
-// Require and configure dotenv
-require('dotenv').config()
+const errorHandler = require('middlewares').errorHandler;
+const appConfig = require('config').appConfig;
 
-// Load App config
-const config = require('./config/app.config');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
-// Globales variables
-const REST_API_NAME = config.REST_API_NAME || process.env.REST_API_NAME;
-const REST_API_PORT = config.REST_API_PORT || process.env.REST_API_PORT;
+app.use(cors({
+    origin: (origin, callback) => callback(null, true),
+    credentials: true
+}));
 
-// ROOT
-app.get('/', (req, res) => {
-    res.send(`Welcome to ${REST_API_NAME}`);
-});
+app.use('/', require('routes'));
 
-// Listening to the application
-app.listen(REST_API_PORT, () => {
-    console.log(`${REST_API_NAME} is listening on port ${REST_API_PORT}`);
+app.use(errorHandler);
+
+const port = process.env.NODE_ENV === 'production' ? (appConfig.REST_API_PORT || 80) : 5000;
+app.listen(port, () => {
+    console.log(`${appConfig.REST_API_NAME} is listening on port ${port}`);
 });

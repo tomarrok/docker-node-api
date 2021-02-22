@@ -9,6 +9,7 @@
 
 # Supported tags and respective `Dockerfile` links
 - `latest`
+- `1.1.0`
 - `1.0.0`, `1.0.8`, `1.0.9`, `1.0.10`, `1.0.17`, `1.0.19`, `1.0.20`, `1.0.21`, `1.0.22`
 
 # Quick reference (cont.)
